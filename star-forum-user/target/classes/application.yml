@@ -1,0 +1,30 @@
+server:
+  port: 9002
+spring:
+  application:
+    name: star-forum-user
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/star_forum_user?characterEncoding=utf-8
+    username: root
+    password: 123
+  redis:
+    host: 192.168.79.11
+
+pagehelper:
+  params: count=countSql
+  helper-dialect: mysql
+  support-methods-arguments: true
+  reasonable: true
+
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+jwt:
+  config:
+    key: star-forum
+    ttl: 3600000
+
+
