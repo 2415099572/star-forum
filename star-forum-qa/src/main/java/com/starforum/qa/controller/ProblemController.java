@@ -23,4 +23,9 @@ public class ProblemController {
     public Result findProblemById(@PathVariable("problemId") String problemId){
         return new Result(true, StateCode.SUCCESS, "查询成功", problemService.findProblemById(problemId));
     }
+
+    @RequestMapping(value = "/hot", method = RequestMethod.GET)
+    public Result findHotProblem(){
+        return new Result(true, StateCode.SUCCESS, "查询成功", problemService.findHotProblem());
+    }
 }

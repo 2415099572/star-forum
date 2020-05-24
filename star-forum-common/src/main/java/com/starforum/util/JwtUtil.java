@@ -34,9 +34,9 @@ public class JwtUtil {
         long nowMillis = System.currentTimeMillis();
         Date now = new Date(nowMillis);
         JwtBuilder builder = Jwts.builder()
-                .setId(id)
-                .setSubject(subject)
-                .setIssuedAt(now)
+                .setId(id) //id
+                .setSubject(subject) //用户名
+                .setIssuedAt(now)  //登录时间
                 .signWith(SignatureAlgorithm.HS256, key)
                 .claim("roles", roles);
         if(ttl > 0){

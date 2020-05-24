@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="star-forum-article" />
+        <module name="star-forum-user" />
+        <module name="star-forum-qa" />
+        <module name="star-forum-common" />
+        <module name="star-forum-eureka" />
+        <module name="star-forum-base" />
+        <module name="star-forum-soft" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="star-forum-article" target="1.8" />
+      <module name="star-forum-base" target="1.8" />
+      <module name="star-forum-common" target="1.8" />
+      <module name="star-forum-eureka" target="1.8" />
+      <module name="star-forum-parent" target="1.8" />
+      <module name="star-forum-qa" target="1.8" />
+      <module name="star-forum-soft" target="1.8" />
+      <module name="star-forum-user" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="star-forum-article" options="-parameters" />
+      <module name="star-forum-base" options="-parameters" />
+      <module name="star-forum-common" options="-parameters" />
+      <module name="star-forum-eureka" options="-parameters" />
+      <module name="star-forum-qa" options="-parameters" />
+      <module name="star-forum-soft" options="-parameters" />
+      <module name="star-forum-user" options="-parameters" />
+    </option>
+  </component>
+</project>

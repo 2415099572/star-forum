@@ -46,4 +46,8 @@ public interface ProblemDao {
     )
     @Select("SELECT `id`, `title`, `content`, `createtime`, `updatetime`, `userid`, `nickname`, `visits`, `thumbup`, `reply` FROM tb_problem WHERE id = #{problemId}")
     Problem findProblemById(@Param("problemId") String problemId);
+
+    @ResultMap(value = "problem")
+    @Select("SELECT `id`, `title`, `content`, `createtime`, `updatetime`, `userid`, `nickname`, `visits`, `thumbup`, `reply` FROM tb_problem ORDER BY visits DESC")
+    List<Problem> findHotProblem();
 }

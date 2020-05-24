@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/star-forum-article/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/star-forum-base/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/star-forum-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/star-forum-eureka/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/star-forum-qa/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/star-forum-soft/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/star-forum-user/src/main/java" charset="UTF-8" />
+  </component>
+</project>

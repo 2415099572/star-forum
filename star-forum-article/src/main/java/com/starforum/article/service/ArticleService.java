@@ -5,6 +5,7 @@ import com.starforum.article.entity.Article;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -20,4 +21,16 @@ public class ArticleService {
         return articleDao.findArticleById(articleId);
     }
 
+    public List<Article> findHotArticle(){
+        return articleDao.findHotArticle();
+    }
+
+    public void addArticle(Article article){
+
+        articleDao.addArticle(article);
+    }
+
+    public List<Article> findArticleByUserId(String userId) {
+        return articleDao.findArticleByUserId(userId);
+    }
 }

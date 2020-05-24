@@ -21,4 +21,7 @@ public class ProblemService {
         return problemDao.findProblemById(problemId);
     }
 
+    public List<Problem> findHotProblem(){
+        return problemDao.findHotProblem();
+    }
 }

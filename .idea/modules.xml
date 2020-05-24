@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/star-forum.iml" filepath="$PROJECT_DIR$/.idea/star-forum.iml" />
+      <module fileurl="file://$PROJECT_DIR$/star-forum-article/star-forum-article.iml" filepath="$PROJECT_DIR$/star-forum-article/star-forum-article.iml" />
+      <module fileurl="file://$PROJECT_DIR$/star-forum-base/star-forum-base.iml" filepath="$PROJECT_DIR$/star-forum-base/star-forum-base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/star-forum-common/star-forum-common.iml" filepath="$PROJECT_DIR$/star-forum-common/star-forum-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/star-forum-eureka/star-forum-eureka.iml" filepath="$PROJECT_DIR$/star-forum-eureka/star-forum-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/star-forum-parent/star-forum-parent.iml" filepath="$PROJECT_DIR$/star-forum-parent/star-forum-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/star-forum-qa/star-forum-qa.iml" filepath="$PROJECT_DIR$/star-forum-qa/star-forum-qa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/star-forum-soft/star-forum-soft.iml" filepath="$PROJECT_DIR$/star-forum-soft/star-forum-soft.iml" />
+      <module fileurl="file://$PROJECT_DIR$/star-forum-user/star-forum-user.iml" filepath="$PROJECT_DIR$/star-forum-user/star-forum-user.iml" />
+    </modules>
+  </component>
+</project>

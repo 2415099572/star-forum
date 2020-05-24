@@ -5,8 +5,14 @@ import com.starforum.entity.StateCode;
 import com.starforum.user.entity.User;
 import com.starforum.user.service.UserService;
 import com.starforum.util.JwtUtil;
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.ExpiredJwtException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/user")
@@ -18,6 +24,9 @@ public class UserController {
 
     @Autowired
     private JwtUtil jwtUtil;
+
+    @Autowired
+    private HttpServletRequest request;
 
     @RequestMapping(method = RequestMethod.GET)
     public Result findAll(){
@@ -32,7 +41,22 @@ public class UserController {
         }
 
         String token = jwtUtil.createJWT(userLogin.getId(), userLogin.getMobile(), "user");
-        return new Result(true, StateCode.SUCCESS, "登录成功", token);
+        Map map = new HashMap();
+        map.put("token", token);
+        map.put("user", userLogin);
+        return new Result(true, StateCode.SUCCESS, "登录成功", map);
     }
 
+    @RequestMapping(value = "/check", method = RequestMethod.POST)
+    public Result checkLogin(){
+        String token = request.getHeader("Authorization");
+        try {
+            Claims claims = jwtUtil.parseJWT(token);
+        }catch (ExpiredJwtException eje) {
+            return new Result(false, StateCode.UNAUTHORIZED, "用户登录超时", eje);
+        } catch (Exception e){
+            return new Result(false, StateCode.VALIDATE_FAILED, "token错误", e);
+        }
+        return new Result(true, StateCode.SUCCESS, "验证成功");
+    }
 }

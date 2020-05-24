@@ -53,4 +53,15 @@ public interface ArticleDao {
     )
     @Select("SELECT `id`, `userid`, `title`, `content`, `createtime`, `updatetime`, `isrecommend`, `visits`, `thumbup`, `comment`, `state`, `url`, `labelid` FROM tb_article WHERE id = #{articleId}")
     public Article findArticleById(@Param("articleId") String articleId);
+
+    @ResultMap(value = "article1")
+    @Select("SELECT `id`, `userid`, `title`, `content`, `createtime`, `updatetime`, `isrecommend`, `visits`, `thumbup`, `comment`, `state`, `url`, `labelid` FROM tb_article WHERE isrecommend = 1 ORDER BY thumbup DESC")
+    public List<Article> findHotArticle();
+
+    @Insert("INSERT INTO tb_article(id, userid, title, content, createtime, url, labelid) VALUES(#{id}, #{userId}, #{title}, #{content}, #{createTime}, #{url}, #{labelId})")
+    public void addArticle(Article article);
+
+    @ResultMap(value = "article1")
+    @Select("SELECT `id`, `userid`, `title`, `content`, `createtime`, `updatetime`, `isrecommend`, `visits`, `thumbup`, `comment`, `state`, `url`, `labelid` FROM tb_article WHERE userid = #{userId}")
+    List<Article> findArticleByUserId(@Param("userId") String userId);
 }
